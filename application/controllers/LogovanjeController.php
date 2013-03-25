@@ -172,7 +172,7 @@ class LogovanjeController extends Zend_Controller_Action
                              
                $db = Zend_Db_Table_Abstract::getDefaultAdapter();
                
-                             
+               //Upload podataka iz CSV fajla u tabelu "prodaja" koja se nalazi u DB.              
                $sql="LOAD DATA INFILE '".$folder.$file."' INTO TABLE prodaja FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 LINES (".$kol.")" ;
                
                $db->query($sql);
